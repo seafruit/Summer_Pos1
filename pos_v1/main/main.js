@@ -18,7 +18,6 @@ function getExitElementByBarcode(array, barcode) {
     //     return item.barcode===barcode;//返回匹配正确的item
     // })
     // return result;//返回undefined；
-
     for (var item of array) {
         if (item.barcode === barcode) {
             return item;
@@ -52,7 +51,7 @@ function getCountItems(formattedTags) {
     for (let formattedTag of formattedTags) {
         let countItem = getExitElementByBarcode(result, formattedTag.barcode);
         //countItem===undefined;
-        if (countItem) {
+        if (countItem===null) {
             result.push({barcode: formattedTag.barcode, count: formattedTag.count});
         } else {
             countItem.count += formattedTag.count;

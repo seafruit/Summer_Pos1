@@ -11,10 +11,10 @@ describe('pos', () => {
     ];
     let formattedTags=getFormattedTags(tags);
     let expectItems=[
-        {barcode:'ITEM000001',count:1},
-        {barcode:'ITEM000001',count:1},
-        {barcode:'ITEM000003',count:2},
-        {barcode:'ITEM000005',count:1}
+      {barcode:'ITEM000001',count:1},
+      {barcode:'ITEM000001',count:1},
+      {barcode:'ITEM000003',count:2},
+      {barcode:'ITEM000005',count:1}
     ];
     expect(formattedTags).toEqual(expectItems);
   });
@@ -183,7 +183,6 @@ describe('pos', () => {
   });
 
 
-
   it('should print text', () => {
 
     const tags = [
@@ -213,7 +212,10 @@ describe('pos', () => {
 
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
+
 });
+
+
 
 
 
